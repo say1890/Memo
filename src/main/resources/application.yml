@@ -1,0 +1,16 @@
+#spring.mvc.view.prefix = /WEB-INF/jsp
+# spring.mvc.view.suffix =
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp
+      suffix: .jsp
+     
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/memo_juhyang?serverTimeZone=UTC&characterEncoding=UTF-8
+    username: root
+    password: root
+    
+  
+        
