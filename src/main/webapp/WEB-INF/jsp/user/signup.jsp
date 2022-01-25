@@ -92,25 +92,24 @@
 			 $.ajax({
 				 type:"post",
 				 url:"/user/sign_up",
-				 data: { "loginId" : loginId, 
-						 "password" : password,
-						 "name" : name,
-						 "email" : email	 
-				 },
-				 success:function(data){
-						alert(data.result);
-						 //login 화면으로 이동
-						 location.href="/user/signin_view";
-					 },
-
-				 error:function(){
-					 alert("에러 발생")
-				 }
-			 })
+				 data:{"loginId":loginId, "password":password, "name":name, "email":email},
+				 success:function(data) {
+						if(data.result == "success") {
+							// 로그인 화면으로 이동
+							location.href = "/user/signin_view";
+							
+						} else {
+							alert("회원가입 실패");
+						}
+					}, 
+					error:function() {
+						alert("에러 발생");
+					}
+			 });
 				
 			
 			
-		})
+		});
 		
 	});
 	
