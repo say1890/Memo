@@ -5,15 +5,15 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>메모 입력</title>
+<title>메모 보기</title>
 <!-- bootstrap -->
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- stylesheet -->
+ 	<!-- stylesheet -->
 	<link rel = "stylesheet" href = "/static/css/style.css" type = "text/css">
 </head>
 <body>
@@ -25,13 +25,14 @@
 					<h1 class ="text-center">메모 입력</h1>
 					<div class ="d-flex">
 						<label class ="mr-2">제목:</label>
-						<input type ="text" class ="form-control col-11" placeholder = "제목 입력" id ="titleInput">
+						<input type ="text" class ="form-control col-11" placeholder = "제목 입력" id ="titleInput"	value ="${post.subject}">
 					</div>	
-						<textarea class ="form-control mt-5" rows ="5" id="contentInput"></textarea>
-						<input type ="file" id ="fileInput">
+						<textarea class ="form-control mt-5" rows ="5" id="contentInput">${post.content}</textarea>
+						<input type ="file" class ="mt-3">
 						<div class ="d-flex justify-content-between mt-5">
 							<a href = "/post/list_view" class ="btn btn-info">목록으로</a>
-							<button type ="button" class ="btn btn-success" id ="saveBtn">저장하기</button>
+							<button type ="button"  class ="btn btn-danger" id ="deleteBtn" data-post-id ="${post.id}">삭제</button>
+							<button type ="button" class ="btn btn-success" id ="saveBtn">수정</button>
 						</div>
 				</div>
 			</section>
@@ -41,48 +42,28 @@
 		
 		<script>
 		$(document).ready(function(){
-			$("#saveBtn").on("click",function(){
-				var title  = $("#titleInput").val().trim();
-				var content  = $("#contentInput").val();
+			$("#deleteBtn").on("click",function(){
 				
-				if(title == null || title == ""){
-					alert("제목을 입력하세요.");
-				}
-				if(content == null || content == ""){
-					alert("내용을 입력하세요");
-				}
-				
-				var formData = new formData();
-				formData.append("subject",title);
-				formData.append("content",content);
-				formData.append("file"), $("#fileInput")[0].files[0]);
-				
-				
+				let postId = $(this).data('post-id');
 				$.ajax({
-					type :"post",
-					url:"/post/create",
-					data:formData,
-					enctype:"multipart/form-data", //  파일 업로드 필수
-					processData:false,
-					contentType:false,
+					
+					type:"get",
+					url:"/post/delete",
+					data:{"postId":postId},
 					success:function(data){
-						if(data.result == "success"){
-							alert("성공");
-							location.href = "/post/list_view";
-						}
-						else{
-							alert("글쓰기 실패");
+						if(data.result=="success"){
+							alert("삭제 성공");
+							location.href = "/post/list_view"
 						}
 					},
 					error:function(){
 						alert("에러 발생");
 					}
+					
+					
 				});
-				
 			});
-			
 		});
 		</script>
-
 </body>
 </html>

@@ -20,7 +20,7 @@
 
 </head>
 <body>
-	<div id = "wrap" class = "bg-primary">
+	<div id = "wrap">
 	 	<c:import url ="/WEB-INF/jsp/include/header.jsp" />
 	 	<section class = "d-flex justify-content-center">
 	 	
@@ -30,7 +30,7 @@
 				<input  type = "password"  id = "passwordInput" placeholder = "비밀번호" class ="mt-3">
 	 			<button type = "submit"  class ="mt-3">로그인</button>
 	 			<div class ="text-center mt-2">
-	 				<a href = "/signup_view">회원가입</a>
+	 				<a href = "user/signup_view">회원가입</a>
 	 			</div>
 	 		</div>
 	 	</form>
