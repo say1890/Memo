@@ -63,7 +63,7 @@ int count = userBO.AddUser(loginId, password, name, email);
 				session.setAttribute("userId", user.getId());
 				session.setAttribute("userLoginId", user.getLoginId());
 				session.setAttribute("userName", user.getName());
-				session.setAttribute("userId", user.getId());
+				
 				
 			}
 			else {
@@ -73,6 +73,8 @@ int count = userBO.AddUser(loginId, password, name, email);
 			return result;
 			
 	}
+	
+	
 	
 	
 }

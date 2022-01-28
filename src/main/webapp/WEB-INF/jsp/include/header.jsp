@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-		<header class ="bg-secondary d-flex align-items-center ">
+		<header class ="bg-secondary d-flex align-items-center justify-content-between">
 			<h1 class ="ml-5">Memo</h1>
 			
 			<%-- 세션에 userId 값이 존재하는지? --%>
