@@ -39,4 +39,13 @@
 	password = #{password}
 	
 	</select>
+	
+		<select id = "IsDuplicateID" parameterType = "String" resultType ="boolean">
+	SELECT count(1) FROM `user` where  `loginId` = #{loginId}; 
+	</select>
+	
+	<select id ="IsDuplicateEmail" parameterType = "String" resultType ="boolean">
+		SELECT count(1) FROM `user` where  `email` = #{email}; 
+	</select>
+	
 </mapper>

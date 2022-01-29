@@ -31,4 +31,12 @@ public class UserBO {
 		String encPw = EncryptUtils.md5(password);
 		return userDAO.selectUser(loginId, encPw);
 	}
+
+	public boolean CountUser(String loginId) {
+		return userDAO.IsDuplicateID(loginId);
+	}
+
+	public Boolean CountEmail(String email) {
+		return userDAO.IsDuplicateEmail(email);
+	}
 }

@@ -15,7 +15,7 @@
 					
 					<c:otherwise>
 						<div class ="mr-3">
-							<a href= "/user/sign_in">로그인</a>
+							<a href= "/user/signin_view">로그인</a>
 						</div>
 					</c:otherwise>
 					
