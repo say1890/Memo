@@ -7,12 +7,16 @@
 			userId
 			,`subject`
 			,`content`
+			,`imagePath`
 			,`createdAt`
-			,`updatedAt`)
-		VALUES (
+			,`updatedAt`
+		)
+		VALUES
+		(
 		 #{userId}
 		 ,#{subject}
 		 ,#{content}
+		 ,#{imagePath}
 		 ,now()
 		 ,now()
 		
@@ -26,6 +30,7 @@
 			,`userId`
 			,`subject`
 			,`content`
+			
 			,`createdAt`
 			,`updatedAt`
 			
@@ -43,6 +48,7 @@
 			,`userId`
 			,`subject`
 			,`content`
+			,`imagePath`
 			,`createdAt`
 			,`updatedAt`
 			

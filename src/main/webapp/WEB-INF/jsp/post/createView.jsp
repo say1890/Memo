@@ -52,10 +52,10 @@
 					alert("내용을 입력하세요");
 				}
 				
-				var formData = new formData();
+				var formData = new FormData();
 				formData.append("subject",title);
 				formData.append("content",content);
-				formData.append("file"), $("#fileInput")[0].files[0]);
+				formData.append("file", $("#fileInput")[0].files[0]);
 				
 				
 				$.ajax({

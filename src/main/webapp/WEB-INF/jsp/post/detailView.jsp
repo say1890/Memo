@@ -22,13 +22,17 @@
 			<c:import url ="/WEB-INF/jsp/include/header.jsp" />
 			<section class ="d-flex justify-content-center">
 				<div class ="w-75 my-5">
-					<h1 class ="text-center">메모 입력</h1>
+					<h1 class ="text-center">메모 보기</h1>
 					<div class ="d-flex">
 						<label class ="mr-2">제목:</label>
 						<input type ="text" class ="form-control col-11" placeholder = "제목 입력" id ="titleInput"	value ="${post.subject}">
 					</div>	
 						<textarea class ="form-control mt-5" rows ="5" id="contentInput">${post.content}</textarea>
-						<input type ="file" class ="mt-3">
+						<div>
+							<img src = "${post.imagePath}">
+						</div>
+						
+						
 						<div class ="d-flex justify-content-between mt-5">
 							<a href = "/post/list_view" class ="btn btn-info">목록으로</a>
 							<button type ="button"  class ="btn btn-danger" id ="deleteBtn" data-post-id ="${post.id}">삭제</button>
