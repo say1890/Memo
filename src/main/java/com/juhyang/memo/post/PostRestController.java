@@ -27,7 +27,7 @@ public class PostRestController {
 	public Map<String, String> create(
 			@RequestParam("content") String content,
 			@RequestParam("subject") String subject,
-			@RequestParam("file")MultipartFile file,
+			@RequestParam(value ="file",required = false )MultipartFile  file,
 			HttpServletRequest request
 			) {
 

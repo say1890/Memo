@@ -18,6 +18,7 @@
 	<link rel = "stylesheet" href = "/static/css/user/style.css" type = "text/css">
 
 
+
 </head>
 <body>
 	<div id = "wrap">
@@ -26,11 +27,14 @@
 	 	
 	 	<form id="loginForm">
 	 		<div class = "login-box my-5">
-	 			<input  type = "text"  id = "loginIdInput" placeholder = "아이디" class = "mt-3">
-				<input  type = "password"  id = "passwordInput" placeholder = "비밀번호" class ="mt-3">
-	 			<button type = "submit"  class ="mt-3">로그인</button>
+	 			<input  type = "text"  id = "loginIdInput" placeholder = "아이디" class = "form-control mt-3">
+				<input  type = "password"  id = "passwordInput" placeholder = "비밀번호" class = "form-control mt-3">
+				<div class ="d-flex justify-content-center">
+	 			<button type = "submit"  class ="mt-3 btn btn-light ju">로그인</button>
+	 			</div>
 	 			<div class ="text-center mt-2">
-	 				<a href = "user/signup_view">회원가입</a>
+	 				
+	 				<a href = "/user/signup_view">회원가입</a>
 	 			</div>
 	 		</div>
 	 	</form>

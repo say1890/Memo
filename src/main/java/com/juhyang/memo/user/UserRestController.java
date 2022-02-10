@@ -74,6 +74,22 @@ int count = userBO.AddUser(loginId, password, name, email);
 			
 	}
 	
+	@PostMapping("/checkId")
+	public Map<String,Boolean> checkId(@RequestParam("loginId") String loginId){
+		Map<String,Boolean> result = new HashMap<>();
+		result.put("result",userBO.CountUser(loginId));
+		return result;
+		
+	}
+	
+	@PostMapping("/checkEmail")
+	public Map<String,Boolean> checkEmail(@RequestParam("email") String email){
+		Map<String,Boolean> result = new HashMap<>();
+		result.put("result",userBO.CountEmail(email));
+		return result;
+			
+		}
+	
 	
 	
 	

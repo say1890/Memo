@@ -18,4 +18,12 @@ public interface UserDAO {
 public User selectUser(@Param("loginId")String loginId,
 		@Param("password") String password);
 
+
+
+public boolean IsDuplicateID(@Param("loginId")String loginId);
+
+
+
+public Boolean IsDuplicateEmail(@Param("email")String email);
+
 }
