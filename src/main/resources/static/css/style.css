@@ -7,9 +7,33 @@
 }
 
 
+
+
+
 header{
 	height:70px;
 	
+}
+
+
+#post{
+	width:1200px;
+	
+}
+
+#userInfo{
+	 vertical-align: top;
+	 height:40px;
+}
+
+#postPicture{
+	width:500px;
+	height:500px;
+}
+#description{
+	width:500px;
+	height:100px;
+	word-break:break-all;
 }
 
 .content{
