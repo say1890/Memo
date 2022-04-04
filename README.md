@@ -56,20 +56,6 @@
 
 
 
-###  ✨ DEMO ✨
-
-
- 🍓 회원 가입 /  로그인
- ![user](demo/join_and_login.gif)
- 
- 🍓  글 쓰기
- ![user](demo/find_pw.gif)
-
- 🍓 글 수정 / 삭제 
- ![user](demo/upload_and_comment.gif)
- 
- 🍓 로그 아웃
- ![user](demo/logout.gif)
 
  
  
@@ -87,13 +73,6 @@
 ### 🤔 향후 계획
  * 테마 선택 기능 추가 
 
-
-
-
-###   📂 폴더 구조
-~~~
-
-~~~
 
 
 ![hyamming's GitHub stats](https://github-readme-stats.vercel.app/api?username=say1890&show_icons=true&theme=radical)
