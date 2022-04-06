@@ -31,11 +31,11 @@
  ## -- USER 패키지 --
  
   * 로그인
-   * package : [com.juhyang.Memo.user.*](https://github.com/say1890/Memo/tree/master/src/main/java/com/juhyang/Memo/user)
+   * package : [com.juhyang.Memo.user.*](https://github.com/say1890/Memo/tree/develop/src/main/java/com/juhyang/memo/user)
    * view : [/webapp/WEB-INF/jsp/user/*](https://github.com/say1890/Memo/blob/develop/src/main/webapp/WEB-INF/jsp/user/signIn.jsp)
  
  * 회원가입
-   * package : [com.juhyang.Memo.user.*](https://github.com/say1890/Memo/tree/master/src/main/java/com/juhyang/Memo/user)
+   * package : [com.juhyang.Memo.user.*](https://github.com/say1890/Memo/tree/develop/src/main/java/com/juhyang/memo/user)
    * view : [/webapp/WEB-INF/jsp/user/*](https://github.com/say1890/Memo/blob/develop/src/main/webapp/WEB-INF/jsp/user/signup.jsp)
   
 
@@ -47,11 +47,11 @@
    * view : [/webapp/WEB-INF/jsp/post/*](https://github.com/say1890/Memo/blob/develop/src/main/webapp/WEB-INF/jsp/post/listView.jsp)
 
  * 메모 디테일
-   * package : [com.juhyang.Memo.post.*](https://github.com/say1890/Memo/tree/master/src/main/java/com/juhyang/Memo/post)
+   * package : [com.juhyang.Memo.post.*](https://github.com/say1890/Memo/tree/develop/src/main/java/com/juhyang/memo/post)
    * view : [/webapp/WEB-INF/jsp/post/*](https://github.com/say1890/Memo/blob/develop/src/main/webapp/WEB-INF/jsp/post/detailView.jsp)
 
 * 메모 생성
-   * package : [com.juhyang.Memo.post.*](https://github.com/say1890/Memo/tree/master/src/main/java/com/juhyang/Memo/post)
+   * package : [com.juhyang.Memo.post.*](https://github.com/say1890/Memo/tree/develop/src/main/java/com/juhyang/memo/post)
    * view : [/webapp/WEB-INF/jsp/post/*](https://github.com/say1890/Memo/blob/develop/src/main/webapp/WEB-INF/jsp/post/createView.jsp)
 
 
